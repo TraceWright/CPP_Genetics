@@ -4,7 +4,7 @@ sudo apt update
 sudo apt install libseqan2-dev
 sudo apt install build-essential
 
-to build:
+C++ build:
 copy makefile to working directory and change the target inside the makefile;
 point debian to windows directory where the file (e.g. first_example.cpp) is: cd /mnt/c/CPP_Genetics/seqan_tutorial/
 type in 'make' to create the executable (e.g. first_example)
@@ -12,3 +12,17 @@ type in 'make' to create the executable (e.g. first_example)
 run the new executable from debian (e.g. ./first_example)
 
 'make clean' removes all the stuff we don't need from the building process
+
+
+
+MongoDB install:
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install mongodb
+
+Start MongoDB:
+sudo service mongodb start
+mongo
+
+
+
