@@ -25,4 +25,35 @@ sudo service mongodb start
 mongo
 
 
+sudo apt-get install mongodb-dev 
+sudo apt-get install libboost-all-dev
+sudo apt install libmongoc-dev
+
+----http://mongoc.org/libmongoc/current/installing.html----
+sudo apt ake install libmongoc-1.0-0
+sudo apt install automake
+$ wget https://github.com/mongodb/mongo-c-driver/releases/download/1.9.4/mongo-c-driver-1.9.4.tar.gz
+$ tar xzf mongo-c-driver-1.9.4.tar.gz
+$ cd mongo-c-driver-1.9.4
+$ ./configure --disable-automatic-init-and-cleanup
+
+make
+sudo make install
+
+sudo apt install git
+sudo apt install cmake
+
+git clone https://github.com/mongodb/mongo-cxx-driver.git --branch releases/stable --depth 1
+cd mongo-cxx-driver/build
+cmake -DCMAKE_BUILD_TYPE=Release -DBSONCXX_POLY_USE_BOOST=1 -DCMAKE_INSTALL_PREFIX=/usr/local ..
+
+make
+sudo make install
+
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
+
+
+
+
 
